@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="brand">
+                <span class="logo">CASIO</span>
+                <span class="model">fx-991ES PLUS</span>
+                <div class="solar-panel"></div>
+            </div>
+            <div class="display">
+                <div id="history">0</div>
+                <div id="input">0</div>
+            </div>
+            <div class="buttons">
+                <div class="row">
+                    <button class="function-key">SHIFT</button>
+                    <button class="function-key">ALPHA</button>
+                    <button class="function-key">MODE</button>
+                    <button class="special" id="clear">AC</button>
+                </div>
+                <div class="row">
+                    <button class="dgn" id="sqrt">√</button>
+                    <button class="dgn" id="power">x²</button>
+                    <button class="dgn" id="log">log</button>
+                    <button class="dgn" id="ln">ln</button>
+                </div>
+                <div class="row">
+                    <button class="dgn">sin</button>
+                    <button class="dgn">cos</button>
+                    <button class="dgn">tan</button>
+                    <button class="dgn" id="memory-store">MS</button>
+                </div>
+                <div class="row">
+                    <button class="dgn" id="bracket">()</button>
+                    <button class="dgn" id="power-y">^</button>
+                    <button class="dgn" id="backspace">DEL</button>
+                    <button class="dgn" id="memory-recall">MR</button>
+                </div>
+                <div class="row">
+                    <button class="num">7</button>
+                    <button class="num">8</button>
+                    <button class="num">9</button>
+                    <button class="dgn">/</button>
+                </div>
+                <div class="row">
+                    <button class="num">4</button>
+                    <button class="num">5</button>
+                    <button class="num">6</button>
+                    <button class="dgn">*</button>
+                </div>
+                <div class="row">
+                    <button class="num">1</button>
+                    <button class="num">2</button>
+                    <button class="num">3</button>
+                    <button class="dgn">-</button>
+                </div>
+                <div class="row">
+                    <button class="num">0</button>
+                    <button class="num">.</button>
+                    <button class="dgn">%</button>
+                    <button class="dgn">+</button>
+                </div>
+                <div class="row">
+                    <button class="dgn" id="pi">π</button>
+                    <button class="dgn" id="exp">EXP</button>
+                    <button class="dgn" id="ans">ANS</button>
+                    <button class="equal" id="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

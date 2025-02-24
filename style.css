@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+    padding: 15px;
+    background: #303030;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    height: 560px;
+    border: 2px solid #202020;
+    position: relative;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.model {
+    color: #aaa;
+    font-size: 0.7rem;
+    margin-top: -5px;
+}
+
+.solar-panel {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(to right, #444, #222);
+    border: 1px solid #555;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+.solar-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 23px,
+        #555 23px,
+        #555 25px
+    );
+    opacity: 0.5;
+}
+
+.display {
+    background: #c8e6c9;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: right;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #222;
+    height: 80px;
+}
+
+#history {
+    font-size: 0.8rem;
+    color: #666;
+    min-height: 20px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Courier New', monospace;
+}
+
+#input {
+    font-size: 1.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Courier New', monospace;
+    min-height: 35px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+button {
+    border: none;
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.num {
+    background: #444;
+    color: white;
+}
+
+.dgn {
+    background: #333;
+    color: white;
+}
+
+.function-key {
+    background: #1a237e;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.special {
+    background: #b71c1c;
+    color: white;
+}
+
+.equal {
+    background: #1b5e20;
+    color: white;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2), transparent);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    pointer-events: none;
+}
+
+@keyframes buttonPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.button-press {
+    animation: buttonPress 0.1s ease;
+}
+
+
+.error {
+    color: #b71c1c;
+}
+
+
+.calc::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+    pointer-events: none;
+    border-radius: 15px;
+}
+
+
+@media (max-width: 400px) {
+    .calc {
+        width: 320px;
+        padding: 10px;
+        height: 520px;
+    }
+    
+    button {
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .display {
+        height: 70px;
+    }
+    
+    #input {
+        font-size: 1.6rem;
+    }
+}
