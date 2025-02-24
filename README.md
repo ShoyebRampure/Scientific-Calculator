@@ -2,7 +2,7 @@
 
 A realistic web-based implementation of the Casio fx-991ES PLUS scientific calculator with full functionality and authentic design.
 
-'![Casio Calculator](https://raw.githubusercontent.com/ShoyebRampure/Scientific-Calculator/main/screenshot.png)'
+
 
 ## Features
 
